@@ -1,0 +1,11 @@
+export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+export ASCEND_LAUNCH_BLOCKING=1
+export FORCE_TORCHRUN=1
+export HCCL_EXEC_TIMEOUT=17340 # (0,17340] 
+
+export WANDB_PROJECT="brench-npu-test"
+export WANDB_NAME="internvl2-8b-test-v1"
+
+export PYTHONPATH="${PYTHONPATH}:$(pwd)"
+export TF_CPP_MIN_LOG_LEVEL=3
+export LAUNCHER=pytorch
